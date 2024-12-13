@@ -47,3 +47,12 @@ df_completo.to_csv('empresas_datos_completos.csv')
 print('Todos los datos han sido combinados y exportados a empresas_datos_completos.csv.')
 
 
+# Descargar datos históricos del índice VIX desde 2010 hasta hoy, INDICE DE RIESGO
+vix_data = yf.download('^VIX', start='2010-01-01', interval='1mo')
+
+# Exportar los datos a un archivo CSV
+vix_data.to_csv('vix_data.csv')
+
+# Verificación
+print('Datos del VIX descargados correctamente y exportados a vix_data.csv.')
+
